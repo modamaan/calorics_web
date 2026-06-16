@@ -1,0 +1,1297 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Calorics | High-Performance AI Nutrition</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body
+    class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm"
+    >
+      <div
+        class="flex justify-between items-center max-w-container-max mx-auto px-4 sm:px-margin-desktop h-20"
+      >
+        <div
+          class="font-headline-md text-headline-md font-bold text-primary dark:text-primary shrink-0"
+        >
+          Calorics
+        </div>
+        <div class="hidden md:flex gap-stack-lg">
+          <a
+            class="font-label-md text-label-md text-primary-fixed font-bold border-b-2 border-primary-fixed pb-1"
+            href="#"
+            >Features</a
+          >
+          <a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            href="#"
+            >Pricing</a
+          >
+          <a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            href="#"
+            >About</a
+          >
+        </div>
+        <div class="flex items-center gap-2 sm:gap-stack-md shrink-0">
+          <button
+            class="hidden sm:block font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors active:scale-95 transition-transform px-4 py-2"
+          >
+            Login
+          </button>
+          <button
+            onclick="openModal()"
+            class="bg-primary-fixed text-on-primary-fixed font-bold text-xs sm:text-label-md px-4 py-2 sm:px-6 sm:py-2.5 rounded-full hover:opacity-80 transition-opacity active:scale-95 transition-transform whitespace-nowrap"
+          >
+            Early Access Free
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative overflow-hidden pt-stack-lg pb-24 md:pt-32 hero-gradient"
+      >
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center"
+        >
+          <div class="z-10">
+            <span
+              class="inline-block px-3 py-1 rounded-full bg-primary-fixed/10 text-primary-fixed text-label-sm font-label-sm mb-6 border border-primary-fixed/20"
+            >
+              AI-DRIVEN PRECISION
+            </span>
+            <h1
+              class="font-headline-xl text-headline-xl mb-6 tracking-tight leading-tight"
+            >
+              Your Personal
+              <span class="text-primary-fixed">AI Nutritionist</span> in Your
+              Pocket
+            </h1>
+            <p
+              class="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-lg"
+            >
+              Snap a photo of your meal, let our AI identify the food, calculate
+              nutrition, and automatically track your daily macros in seconds.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                onclick="openModal()"
+                class="bg-primary-fixed text-on-primary-fixed px-8 py-4 rounded-full font-bold text-label-md hover:opacity-90 transition-opacity active:scale-95 whitespace-nowrap"
+              >
+                Early Access Free
+              </button>
+              <button
+                class="glass text-on-surface px-8 py-4 rounded-full font-bold text-label-md hover:bg-surface-variant transition-colors flex items-center justify-center gap-2"
+              >
+                <span class="material-symbols-outlined">play_circle</span>
+                How it works
+              </button>
+            </div>
+          </div>
+          <div class="relative mt-12 lg:mt-0">
+            <div
+              class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed/10 blur-[100px] rounded-full"
+            ></div>
+            <div
+              class="glass p-4 rounded-[2rem] shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-700"
+            >
+              <div
+                class="rounded-[1.5rem] w-full aspect-[4/5] bg-surface-container-low overflow-hidden relative border border-outline-variant/30 flex flex-col shadow-[0_0_40px_rgba(191,243,101,0.05)]"
+              >
+                <!-- Mock App Header -->
+                <div
+                  class="px-6 py-5 border-b border-outline-variant/20 flex justify-between items-center bg-surface/80 backdrop-blur-md z-10"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="text-label-sm text-on-surface-variant font-medium uppercase tracking-wider mb-1"
+                      >Today's Progress</span
+                    >
+                    <span
+                      class="font-bold text-headline-md text-primary-fixed leading-none"
+                      >1,450
+                      <span
+                        class="text-body-sm text-on-surface-variant font-normal"
+                        >/ 2,200 kcal</span
+                      ></span
+                    >
+                  </div>
+                  <div
+                    class="w-12 h-12 rounded-full border-[3px] border-surface-variant border-t-primary-fixed flex items-center justify-center animate-[spin_8s_linear_infinite] relative"
+                  >
+                    <div
+                      class="absolute inset-0 rounded-full border-[3px] border-transparent border-l-primary-fixed/50 animate-[spin_4s_linear_infinite_reverse]"
+                    ></div>
+                    <span
+                      class="material-symbols-outlined text-primary-fixed text-sm absolute animate-pulse"
+                      >local_fire_department</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Mock App Body -->
+                <div
+                  class="p-6 flex-1 flex flex-col gap-5 relative z-0 bg-gradient-to-b from-surface/50 to-surface-container-lowest"
+                >
+                  <!-- Macro Cards -->
+                  <div class="grid grid-cols-3 gap-3">
+                    <div
+                      class="bg-surface-container p-3 rounded-xl border border-outline-variant/10 flex flex-col gap-1 shadow-inner transition-transform hover:scale-105 duration-300"
+                    >
+                      <span
+                        class="text-[10px] text-on-surface-variant uppercase tracking-wider"
+                        >Protein</span
+                      >
+                      <div
+                        class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden mt-1"
+                      >
+                        <div
+                          class="h-full bg-primary-fixed w-[75%] rounded-full shadow-[0_0_8px_rgba(191,243,101,0.6)]"
+                        ></div>
+                      </div>
+                      <span class="text-sm font-bold mt-1 text-on-surface"
+                        >112<span
+                          class="text-xs text-on-surface-variant font-normal"
+                          >g</span
+                        ></span
+                      >
+                    </div>
+                    <div
+                      class="bg-surface-container p-3 rounded-xl border border-outline-variant/10 flex flex-col gap-1 shadow-inner transition-transform hover:scale-105 duration-300"
+                    >
+                      <span
+                        class="text-[10px] text-on-surface-variant uppercase tracking-wider"
+                        >Carbs</span
+                      >
+                      <div
+                        class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden mt-1"
+                      >
+                        <div
+                          class="h-full bg-secondary-fixed w-[50%] rounded-full shadow-[0_0_8px_rgba(211,228,254,0.6)]"
+                        ></div>
+                      </div>
+                      <span class="text-sm font-bold mt-1 text-on-surface"
+                        >140<span
+                          class="text-xs text-on-surface-variant font-normal"
+                          >g</span
+                        ></span
+                      >
+                    </div>
+                    <div
+                      class="bg-surface-container p-3 rounded-xl border border-outline-variant/10 flex flex-col gap-1 shadow-inner transition-transform hover:scale-105 duration-300"
+                    >
+                      <span
+                        class="text-[10px] text-on-surface-variant uppercase tracking-wider"
+                        >Fats</span
+                      >
+                      <div
+                        class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden mt-1"
+                      >
+                        <div
+                          class="h-full bg-error w-[33%] rounded-full shadow-[0_0_8px_rgba(255,180,171,0.6)]"
+                        ></div>
+                      </div>
+                      <span class="text-sm font-bold mt-1 text-on-surface"
+                        >32<span
+                          class="text-xs text-on-surface-variant font-normal"
+                          >g</span
+                        ></span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Recent Meal Scan -->
+                  <div
+                    class="mt-2 bg-surface p-4 rounded-xl border border-primary-fixed/30 relative overflow-hidden group shadow-[0_4px_24px_-4px_rgba(191,243,101,0.15)] cursor-pointer"
+                  >
+                    <!-- Abstract image background -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-br from-primary-fixed/5 to-transparent transition-opacity group-hover:opacity-75"
+                    ></div>
+
+                    <div
+                      class="flex justify-between items-start mb-4 relative z-10"
+                    >
+                      <div>
+                        <div class="flex items-center gap-2 mb-2">
+                          <span
+                            class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse shadow-[0_0_8px_rgba(191,243,101,0.8)]"
+                          ></span>
+                          <span
+                            class="text-[10px] font-bold text-primary-fixed uppercase tracking-widest"
+                            >AI Scan Complete</span
+                          >
+                        </div>
+                        <h4
+                          class="font-bold text-on-surface text-base group-hover:text-primary-fixed transition-colors"
+                        >
+                          Grilled Salmon Bowl
+                        </h4>
+                        <span class="text-xs text-on-surface-variant"
+                          >450 kcal</span
+                        >
+                      </div>
+                      <div
+                        class="w-8 h-8 rounded-full bg-primary-fixed/20 flex items-center justify-center border border-primary-fixed/40"
+                      >
+                        <span
+                          class="material-symbols-outlined text-primary-fixed text-[16px]"
+                          >check</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Ingredient pills -->
+                    <div class="flex flex-wrap gap-2 relative z-10">
+                      <span
+                        class="text-[10px] px-2 py-1 bg-surface-container-highest rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary-fixed/50 transition-colors"
+                        >Salmon (32g P)</span
+                      >
+                      <span
+                        class="text-[10px] px-2 py-1 bg-surface-container-highest rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary-fixed/50 transition-colors"
+                        >Quinoa (21g C)</span
+                      >
+                      <span
+                        class="text-[10px] px-2 py-1 bg-surface-container-highest rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary-fixed/50 transition-colors"
+                        >Avocado (14g F)</span
+                      >
+                    </div>
+
+                    <!-- Scanning line animation overlay -->
+                    <div
+                      class="absolute top-0 left-0 w-full h-[2px] bg-primary-fixed shadow-[0_0_12px_rgba(191,243,101,1)] z-20 animate-[scanLine_3s_ease-in-out_infinite]"
+                    ></div>
+                  </div>
+
+                  <!-- Water Intake -->
+                  <div
+                    class="mt-auto flex items-center justify-between bg-surface-container p-4 rounded-xl border border-outline-variant/10 hover:border-secondary-fixed/30 transition-colors"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-secondary-fixed/20 flex items-center justify-center text-secondary-fixed"
+                      >
+                        <span class="material-symbols-outlined animate-bounce"
+                          >water_drop</span
+                        >
+                      </div>
+                      <div>
+                        <h5 class="text-sm font-bold text-on-surface">
+                          Hydration
+                        </h5>
+                        <span class="text-xs text-on-surface-variant"
+                          >1.2L / 3.0L</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex gap-1.5">
+                      <div
+                        class="w-2 h-6 bg-secondary-fixed rounded-full shadow-[0_0_8px_rgba(211,228,254,0.5)]"
+                      ></div>
+                      <div
+                        class="w-2 h-6 bg-secondary-fixed rounded-full shadow-[0_0_8px_rgba(211,228,254,0.5)]"
+                      ></div>
+                      <div
+                        class="w-2 h-6 bg-surface-variant rounded-full"
+                      ></div>
+                      <div
+                        class="w-2 h-6 bg-surface-variant rounded-full"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl max-w-[200px] animate-bounce-slow"
+              >
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"
+                  ></div>
+                  <span class="text-label-sm font-label-sm text-primary-fixed"
+                    >AI Analysis</span
+                  >
+                </div>
+                <p class="text-body-sm font-body-sm text-white">
+                  Optimal protein intake detected for post-workout recovery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured In -->
+      <section
+        class="py-12 border-y border-outline-variant/10 bg-surface-container-lowest"
+      >
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <p
+            class="text-center text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-8"
+          >
+            Trusted by athletes at
+          </p>
+          <div
+            class="flex flex-wrap justify-center items-center gap-12 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+          >
+            <span class="text-headline-md font-bold">FORBES</span>
+            <span class="text-headline-md font-bold">WIRED</span>
+            <span class="text-headline-md font-bold">TECHCRUNCH</span>
+            <span class="text-headline-md font-bold">VOGUE</span>
+            <span class="text-headline-md font-bold">THE VERGE</span>
+          </div>
+        </div>
+      </section>
+      <!-- Features Bento Grid -->
+      <section class="py-stack-lg">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div class="text-center mb-20">
+            <h2 class="font-headline-lg text-headline-lg mb-4">
+              Precision-Engineered Features
+            </h2>
+            <p class="text-on-surface-variant max-w-2xl mx-auto">
+              No manual entry. No guesswork. Just data-driven results delivered
+              through a sophisticated AI engine.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <!-- AI Food Scanner -->
+            <div
+              class="md:col-span-8 glass rounded-3xl p-stack-md flex flex-col md:flex-row gap-8 overflow-hidden group"
+            >
+              <div class="md:w-1/2 p-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary-fixed/20 flex items-center justify-center text-primary-fixed mb-6"
+                >
+                  <span class="material-symbols-outlined"
+                    >center_focus_strong</span
+                  >
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">
+                  AI Food Scanner
+                </h3>
+                <p class="text-on-surface-variant mb-6">
+                  Point your camera at any meal. Our neural network identifies
+                  ingredients, portions, and exact nutritional value in
+                  real-time.
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-2 text-body-sm">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed text-[18px]"
+                      >check_circle</span
+                    >
+                    Instant Recognition
+                  </li>
+                  <li class="flex items-center gap-2 text-body-sm">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed text-[18px]"
+                      >check_circle</span
+                    >
+                    Multi-Ingredient Separation
+                  </li>
+                  <li class="flex items-center gap-2 text-body-sm">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed text-[18px]"
+                      >check_circle</span
+                    >
+                    Contextual Portion Sizing
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="md:w-1/2 relative min-h-[300px] rounded-2xl overflow-hidden bg-surface-container-lowest border border-outline-variant/20 flex items-center justify-center"
+              >
+                <!-- Viewfinder Frame -->
+                <div
+                  class="absolute inset-4 border border-dashed border-outline-variant/30 rounded-xl transition-colors group-hover:border-primary-fixed/30"
+                ></div>
+                <div
+                  class="absolute top-4 left-4 w-8 h-8 border-t-[3px] border-l-[3px] border-primary-fixed/80 rounded-tl-xl transition-all duration-300 group-hover:scale-110 group-hover:-translate-x-1 group-hover:-translate-y-1"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 w-8 h-8 border-t-[3px] border-r-[3px] border-primary-fixed/80 rounded-tr-xl transition-all duration-300 group-hover:scale-110 group-hover:translate-x-1 group-hover:-translate-y-1"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-4 w-8 h-8 border-b-[3px] border-l-[3px] border-primary-fixed/80 rounded-bl-xl transition-all duration-300 group-hover:scale-110 group-hover:-translate-x-1 group-hover:translate-y-1"
+                ></div>
+                <div
+                  class="absolute bottom-4 right-4 w-8 h-8 border-b-[3px] border-r-[3px] border-primary-fixed/80 rounded-br-xl transition-all duration-300 group-hover:scale-110 group-hover:translate-x-1 group-hover:translate-y-1"
+                ></div>
+
+                <!-- Abstract Food Representation -->
+                <div
+                  class="relative w-40 h-40 flex items-center justify-center animate-[pulse_4s_infinite]"
+                >
+                  <div
+                    class="absolute w-32 h-32 bg-primary-fixed/5 rounded-full blur-2xl group-hover:bg-primary-fixed/15 transition-colors duration-500"
+                  ></div>
+                  <div
+                    class="w-24 h-24 bg-surface-container rounded-full border border-outline-variant/30 shadow-2xl flex items-center justify-center relative z-10 group-hover:scale-105 group-hover:border-primary-fixed/40 transition-all duration-500"
+                  >
+                    <span
+                      class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary-fixed transition-colors duration-500"
+                      >restaurant</span
+                    >
+                  </div>
+
+                  <!-- Floating Bounding Boxes / Labels -->
+                  <div
+                    class="absolute -top-4 -left-8 bg-surface/90 backdrop-blur-md border border-primary-fixed/30 px-3 py-1.5 rounded-lg shadow-[0_8px_16px_rgba(0,0,0,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 translate-y-4 group-hover:translate-y-0 z-20"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"
+                      ></span>
+                      <span class="text-[10px] font-bold text-on-surface"
+                        >Avocado</span
+                      >
+                    </div>
+                    <span
+                      class="text-[9px] text-on-surface-variant block mt-0.5"
+                      >85% Match</span
+                    >
+                  </div>
+
+                  <div
+                    class="absolute top-8 -right-12 bg-surface/90 backdrop-blur-md border border-primary-fixed/30 px-3 py-1.5 rounded-lg shadow-[0_8px_16px_rgba(0,0,0,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 translate-y-4 group-hover:translate-y-0 z-20"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"
+                      ></span>
+                      <span class="text-[10px] font-bold text-on-surface"
+                        >Salmon</span
+                      >
+                    </div>
+                    <span
+                      class="text-[9px] text-on-surface-variant block mt-0.5"
+                      >92% Match</span
+                    >
+                  </div>
+
+                  <div
+                    class="absolute -bottom-6 left-4 bg-surface/90 backdrop-blur-md border border-primary-fixed/30 px-3 py-1.5 rounded-lg shadow-[0_8px_16px_rgba(0,0,0,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 delay-500 translate-y-4 group-hover:translate-y-0 z-20"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"
+                      ></span>
+                      <span class="text-[10px] font-bold text-on-surface"
+                        >Quinoa</span
+                      >
+                    </div>
+                    <span
+                      class="text-[9px] text-on-surface-variant block mt-0.5"
+                      >88% Match</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Scanning Line Overlay -->
+                <div
+                  class="absolute top-0 left-0 w-full h-[1px] bg-primary-fixed shadow-[0_0_15px_rgba(191,243,101,1)] animate-[scanLine_2.5s_ease-in-out_infinite] z-30 opacity-50 group-hover:opacity-100 transition-opacity"
+                ></div>
+
+                <!-- Processing Status -->
+                <div
+                  class="absolute bottom-6 bg-surface-container-highest/80 backdrop-blur-md px-4 py-2 rounded-full border border-outline-variant/30 flex items-center gap-2 z-20 shadow-xl opacity-100 group-hover:border-primary-fixed/40 transition-colors"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary-fixed text-sm animate-spin"
+                    >data_usage</span
+                  >
+                  <span
+                    class="text-xs font-bold text-primary-fixed uppercase tracking-wider"
+                    >Scanning Object</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Smart Goal Setting -->
+            <div
+              class="md:col-span-4 glass rounded-3xl p-stack-md flex flex-col hover:border-primary-fixed/30 transition-colors"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-primary-fixed/20 flex items-center justify-center text-primary-fixed mb-6"
+              >
+                <span class="material-symbols-outlined">track_changes</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md mb-4">
+                Smart Goal Setting
+              </h3>
+              <p class="text-on-surface-variant mb-8">
+                A personalized journey starts with an intelligent questionnaire
+                that adapts based on your bio-responses.
+              </p>
+              <div
+                class="mt-auto bg-surface-container-high rounded-xl p-4 space-y-3"
+              >
+                <div
+                  class="h-2 w-full bg-outline-variant rounded-full overflow-hidden"
+                >
+                  <div class="h-full bg-primary-fixed w-[65%]"></div>
+                </div>
+                <div class="flex justify-between text-label-sm font-label-sm">
+                  <span>Questionnaire Progress</span>
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+            <!-- Seamless Tracking -->
+            <div
+              class="md:col-span-12 glass rounded-3xl p-stack-md grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
+              <div class="flex flex-col">
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary-fixed/20 flex items-center justify-center text-primary-fixed mb-6"
+                >
+                  <span class="material-symbols-outlined">water_drop</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">
+                  Hydration Intelligence
+                </h3>
+                <p class="text-on-surface-variant">
+                  Smart reminders and logging based on local temperature and
+                  activity intensity.
+                </p>
+              </div>
+              <div class="flex flex-col">
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary-fixed/20 flex items-center justify-center text-primary-fixed mb-6"
+                >
+                  <span class="material-symbols-outlined">fitness_center</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">
+                  Exercise Integration
+                </h3>
+                <p class="text-on-surface-variant">
+                  Seamlessly sync with your wearable to adjust caloric needs
+                  based on daily expenditure.
+                </p>
+              </div>
+              <div class="flex flex-col">
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary-fixed/20 flex items-center justify-center text-primary-fixed mb-6"
+                >
+                  <span class="material-symbols-outlined">psychology</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">
+                  Behavioral Science
+                </h3>
+                <p class="text-on-surface-variant">
+                  Insightful micro-nudges that help you build sustainable,
+                  lifelong healthy habits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Weekly Progress / Analytics -->
+      <section
+        class="py-24 relative overflow-hidden bg-surface-container-lowest"
+      >
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="font-headline-lg text-headline-lg mb-6">
+                Advanced Performance Analytics
+              </h2>
+              <p class="text-body-lg text-on-surface-variant mb-8">
+                Get the bird's-eye view of your progress. Our dashboard tracks
+                your consistency, macro distribution, and metabolic shifts over
+                time.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="p-2 glass rounded-lg mt-1">
+                    <span class="material-symbols-outlined text-primary-fixed"
+                      >insights</span
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1">Weekly Health Insight</h4>
+                    <p class="text-body-sm text-on-surface-variant">
+                      "Your protein intake was 15% higher during active days,
+                      leading to a 4% increase in metabolic efficiency."
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="p-2 glass rounded-lg mt-1">
+                    <span class="material-symbols-outlined text-primary-fixed"
+                      >local_fire_department</span
+                    >
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1">Consistency Streak</h4>
+                    <p class="text-body-sm text-on-surface-variant">
+                      You've maintained your caloric deficit for 12 consecutive
+                      days. You are in the top 5% of performers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="glass p-4 sm:p-8 rounded-3xl relative overflow-hidden">
+              <div
+                class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-8"
+              >
+                <h3 class="font-bold text-lg sm:text-base">
+                  Weekly Macro Progress
+                </h3>
+                <div class="flex gap-2 self-end sm:self-auto">
+                  <div
+                    class="px-3 py-1 bg-surface-container rounded text-xs sm:text-label-sm"
+                  >
+                    Daily
+                  </div>
+                  <div
+                    class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded text-xs sm:text-label-sm font-bold"
+                  >
+                    Weekly
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-end justify-between h-32 sm:h-48 gap-1 sm:gap-2 md:gap-4 mb-8 w-full"
+              >
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed/20 rounded-t-sm sm:rounded-t-lg h-[60%] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50"
+                    >Mon</span
+                  >
+                </div>
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed/40 rounded-t-sm sm:rounded-t-lg h-[80%] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50"
+                    >Tue</span
+                  >
+                </div>
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed/60 rounded-t-sm sm:rounded-t-lg h-[45%] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50"
+                    >Wed</span
+                  >
+                </div>
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed rounded-t-sm sm:rounded-t-lg h-[95%] shadow-[0_-4px_12px_rgba(191,243,101,0.2)] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50 font-bold text-primary-fixed"
+                    >Thu</span
+                  >
+                </div>
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed/70 rounded-t-sm sm:rounded-t-lg h-[75%] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50"
+                    >Fri</span
+                  >
+                </div>
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed/30 rounded-t-sm sm:rounded-t-lg h-[40%] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50"
+                    >Sat</span
+                  >
+                </div>
+                <div
+                  class="flex-1 flex flex-col items-center gap-1 sm:gap-2 h-full justify-end"
+                >
+                  <div
+                    class="w-full bg-primary-fixed/50 rounded-t-sm sm:rounded-t-lg h-[65%] transition-all"
+                  ></div>
+                  <span
+                    class="text-[9px] sm:text-[10px] md:text-label-sm opacity-50"
+                    >Sun</span
+                  >
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div
+                  class="bg-surface-container rounded-2xl p-3 sm:p-4 text-center flex flex-row sm:flex-col justify-between sm:justify-center items-center"
+                >
+                  <span class="text-label-sm opacity-50 sm:order-last"
+                    >Avg Calories</span
+                  >
+                  <span
+                    class="block text-primary-fixed font-bold text-xl sm:text-headline-md"
+                    >1,840</span
+                  >
+                </div>
+                <div
+                  class="bg-surface-container rounded-2xl p-3 sm:p-4 text-center flex flex-row sm:flex-col justify-between sm:justify-center items-center"
+                >
+                  <span class="text-label-sm opacity-50 sm:order-last"
+                    >Avg Protein</span
+                  >
+                  <span
+                    class="block text-primary-fixed font-bold text-xl sm:text-headline-md"
+                    >145g</span
+                  >
+                </div>
+                <div
+                  class="bg-surface-container rounded-2xl p-3 sm:p-4 text-center flex flex-row sm:flex-col justify-between sm:justify-center items-center"
+                >
+                  <span class="text-label-sm opacity-50 sm:order-last"
+                    >Compliance</span
+                  >
+                  <span
+                    class="block text-primary-fixed font-bold text-xl sm:text-headline-md"
+                    >92%</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Pricing -->
+      <section class="py-24">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div class="text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg mb-4">
+              Simple, Performance Pricing
+            </h2>
+            <p class="text-on-surface-variant">
+              Invest in your health with clear, predictable plans.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto"
+          >
+            <!-- Free Plan -->
+            <div
+              class="glass p-10 rounded-3xl border-transparent hover:border-outline-variant/30 transition-all flex flex-col"
+            >
+              <div class="mb-8">
+                <h3 class="text-headline-md font-bold mb-2">Free Tier</h3>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-headline-xl font-bold">$0</span>
+                  <span class="text-on-surface-variant">/month</span>
+                </div>
+              </div>
+              <ul class="space-y-4 mb-12 flex-grow">
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check</span
+                  >
+                  Basic Manual Logging
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check</span
+                  >
+                  Limited AI Scans (3/day)
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check</span
+                  >
+                  Standard Dashboard
+                </li>
+                <li class="flex items-center gap-3 opacity-30">
+                  <span class="material-symbols-outlined">block</span> Premium
+                  Health Insights
+                </li>
+                <li class="flex items-center gap-3 opacity-30">
+                  <span class="material-symbols-outlined">block</span> Advanced
+                  Macro Tracking
+                </li>
+              </ul>
+              <button
+                class="w-full py-4 border border-outline-variant/50 rounded-full font-bold hover:bg-surface-variant transition-colors"
+              >
+                Start for Free
+              </button>
+            </div>
+            <!-- Pro Plan -->
+            <div
+              class="glass p-10 rounded-3xl relative overflow-hidden flex flex-col border-primary-fixed/50 scale-105 shadow-2xl"
+            >
+              <div
+                class="absolute top-0 right-0 bg-primary-fixed text-on-primary-fixed px-6 py-1 font-bold text-label-sm rounded-bl-xl uppercase tracking-wider"
+              >
+                Most Popular
+              </div>
+              <div class="mb-8">
+                <h3 class="text-headline-md font-bold mb-2 text-primary-fixed">
+                  Premium Pro
+                </h3>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-headline-xl font-bold">$12</span>
+                  <span class="text-on-surface-variant">/month</span>
+                </div>
+              </div>
+              <ul class="space-y-4 mb-12 flex-grow">
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check_circle</span
+                  >
+                  Unlimited AI Food Scans
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check_circle</span
+                  >
+                  Deep AI Health Insights
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check_circle</span
+                  >
+                  Exercise & Wearable Sync
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check_circle</span
+                  >
+                  1-on-1 Goal Optimization
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-fixed"
+                    >check_circle</span
+                  >
+                  Custom Meal Planning
+                </li>
+              </ul>
+              <button
+                class="w-full py-4 bg-primary-fixed text-on-primary-fixed rounded-full font-bold hover:opacity-90 transition-opacity"
+              >
+                Get Started Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ -->
+      <section class="py-24 bg-surface-container-lowest">
+        <div class="max-w-3xl mx-auto px-margin-desktop">
+          <h2 class="font-headline-lg text-headline-lg mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-4">
+            <details class="glass group rounded-2xl overflow-hidden" open="">
+              <summary
+                class="p-6 cursor-pointer flex justify-between items-center font-bold"
+              >
+                How accurate is the AI Food Scanner?
+                <span
+                  class="material-symbols-outlined transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <div class="p-6 pt-0 text-on-surface-variant">
+                Our AI model is trained on over 2 million professional food
+                images and achieves a 94% accuracy rate on common meals and
+                ingredients. For complex recipes, it utilizes contextual clues
+                and portion estimation to provide high-precision data.
+              </div>
+            </details>
+            <details class="glass group rounded-2xl overflow-hidden">
+              <summary
+                class="p-6 cursor-pointer flex justify-between items-center font-bold"
+              >
+                Does it sync with Apple Health or Google Fit?
+                <span
+                  class="material-symbols-outlined transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <div class="p-6 pt-0 text-on-surface-variant">
+                Yes, Calorics offers bidirectional sync with Apple Health,
+                Google Fit, and major wearable platforms like WHOOP, Oura, and
+                Garmin to ensure your nutritional needs are always aligned with
+                your daily activity.
+              </div>
+            </details>
+            <details class="glass group rounded-2xl overflow-hidden">
+              <summary
+                class="p-6 cursor-pointer flex justify-between items-center font-bold"
+              >
+                Can I cancel my subscription at any time?
+                <span
+                  class="material-symbols-outlined transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <div class="p-6 pt-0 text-on-surface-variant">
+                Absolutely. We believe in our product, but if you're not
+                satisfied, you can cancel your Premium subscription with a
+                single click in the app settings. No hidden fees or exit traps.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section class="py-24 text-center relative overflow-hidden">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-fixed/5 blur-[120px] rounded-full -z-10"
+        ></div>
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <h2 class="font-headline-xl text-headline-xl mb-6">
+            Ready to reach your elite potential?
+          </h2>
+          <p
+            class="text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto"
+          >
+            Join thousands of high-performers who are using Calorics to master
+            their nutrition.
+          </p>
+          <button
+            class="bg-primary-fixed text-on-primary-fixed px-12 py-5 rounded-full font-bold text-headline-md hover:scale-105 transition-transform active:scale-95 shadow-xl shadow-primary-fixed/20"
+          >
+            Join the Elite for Free
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full py-stack-lg border-t border-outline-variant/10 bg-surface-container-lowest text-on-surface"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div
+            class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary mb-6"
+          >
+            Calorics
+          </div>
+          <p class="text-body-sm text-on-surface-variant mb-6">
+            Automating nutrition for the world's highest performers. Precision
+            at your fingertips.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">public</span></a
+            >
+            <a
+              class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">alternate_email</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Product</h4>
+          <ul class="space-y-4 font-body-sm text-body-sm">
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >AI Scanner</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >Integrations</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Company</h4>
+          <ul class="space-y-4 font-body-sm text-body-sm">
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >Privacy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                href="#"
+                >Terms</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Newsletter</h4>
+          <p class="text-body-sm text-on-surface-variant mb-4">
+            Get the latest performance tips delivered to your inbox.
+          </p>
+          <div class="flex gap-2">
+            <input
+              class="bg-surface-container-highest border-none rounded-lg flex-grow px-4 text-body-sm focus:ring-2 focus:ring-primary-fixed transition-all"
+              placeholder="Email"
+              type="email"
+            />
+            <button
+              class="bg-primary-fixed text-on-primary-fixed p-2 rounded-lg"
+            >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop mt-20 pt-8 border-t border-outline-variant/5 text-center"
+      >
+        <p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">
+          © 2024 Calorics. High-Performance Nutrition.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Early Access Modal -->
+    <div
+      id="ea-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center"
+    >
+      <!-- Backdrop -->
+      <div
+        class="absolute inset-0 bg-background/80 backdrop-blur-sm"
+        onclick="closeModal()"
+      ></div>
+
+      <!-- Modal Content -->
+      <div
+        class="glass p-8 rounded-3xl relative z-10 w-full max-w-md mx-4 transform transition-all shadow-2xl border border-outline-variant/30"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-variant transition-colors"
+        >
+          <span
+            class="material-symbols-outlined text-on-surface-variant text-sm"
+            >close</span
+          >
+        </button>
+
+        <h2 class="font-headline-md text-headline-md mb-2 font-bold">
+          Request Early Access
+        </h2>
+        <p class="text-body-sm text-on-surface-variant mb-6">
+          Join the waitlist and help us shape the future of AI nutrition
+          tracking.
+        </p>
+
+        <form
+          id="ea-form"
+          onsubmit="submitForm(event)"
+          class="flex flex-col gap-4"
+        >
+          <div>
+            <label
+              class="block text-label-sm text-on-surface-variant mb-1 font-bold"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="ea-name"
+              required
+              class="w-full bg-surface-container border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all placeholder:text-on-surface-variant/50"
+              placeholder="John Doe"
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-label-sm text-on-surface-variant mb-1 font-bold"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="ea-email"
+              required
+              class="w-full bg-surface-container border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all placeholder:text-on-surface-variant/50"
+              placeholder="john@example.com"
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-label-sm text-on-surface-variant mb-1 font-bold"
+              >What is your primary goal?</label
+            >
+            <select
+              id="ea-goal"
+              required
+              class="w-full bg-surface-container border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Select an option...</option>
+              <option value="Lose weight & burn fat">
+                Lose weight & burn fat
+              </option>
+              <option value="Build muscle & bulk up">
+                Build muscle & bulk up
+              </option>
+              <option value="Maintain current physique">
+                Maintain current physique
+              </option>
+              <option value="Improve athletic performance">
+                Improve athletic performance
+              </option>
+              <option value="Just curious about AI nutrition">
+                Just curious about AI nutrition
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              class="block text-label-sm text-on-surface-variant mb-1 font-bold"
+              >What are you expecting from this app?</label
+            >
+            <textarea
+              id="ea-expectations"
+              required
+              rows="3"
+              class="w-full bg-surface-container border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all placeholder:text-on-surface-variant/50 resize-none"
+              placeholder="I want it to auto-log my meals and track macros perfectly..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-4 rounded-xl mt-4 hover:opacity-90 active:scale-95 transition-all text-label-md"
+          >
+            Join Waitlist
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Micro-interactions and subtle scroll effects
+      document.querySelectorAll("details").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          if (el.open) return; // let it close naturally
+          document.querySelectorAll("details").forEach((openEl) => {
+            if (openEl !== el) openEl.open = false;
+          });
+        });
+      });
+
+      // Simple smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Early Access Modal Logic
+      function openModal() {
+        const modal = document.getElementById("ea-modal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("ea-modal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      function submitForm(e) {
+        e.preventDefault();
+        const name = document.getElementById("ea-name").value;
+        const email = document.getElementById("ea-email").value;
+        const goal = document.getElementById("ea-goal").value;
+        const expectations = document.getElementById("ea-expectations").value;
+
+        const targetEmail = "amaanprogramming@gmail.com";
+        const subject = encodeURIComponent("Early Access Request - " + name);
+        const body = encodeURIComponent(
+          `Hi Calorics Team,\n\nI would like to request early access to the app.\n\nName: ${name}\nEmail: ${email}\nPrimary Goal: ${goal}\nExpectations:\n${expectations}\n\nThanks!`,
+        );
+
+        // Open Gmail Compose with pre-filled data
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${subject}&body=${body}`;
+
+        window.open(gmailLink, "_blank");
+        closeModal();
+      }
+    </script>
+  </body>
+</html>

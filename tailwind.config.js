@@ -1,0 +1,103 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+              "inverse-primary": "#476800",
+              "on-surface-variant": "#c3c9b2",
+              "primary-fixed": "#bff365",
+              "outline": "#8d937e",
+              "inverse-on-surface": "#2e3227",
+              "tertiary-container": "#d4e2fc",
+              "surface-container-low": "#1a1d13",
+              "on-primary-container": "#4b6e00",
+              "on-primary": "#233600",
+              "on-background": "#e2e4d5",
+              "on-secondary-fixed-variant": "#38485d",
+              "outline-variant": "#434938",
+              "secondary-fixed": "#d3e4fe",
+              "on-error": "#690005",
+              "tertiary-fixed-dim": "#b9c7e0",
+              "primary-container": "#bef264",
+              "surface-container-lowest": "#0c0f07",
+              "surface-variant": "#33362b",
+              "background": "#11140c",
+              "tertiary": "#fffdff",
+              "on-error-container": "#ffdad6",
+              "on-surface": "#e2e4d5",
+              "on-tertiary-fixed": "#0d1c2f",
+              "on-secondary-container": "#a9bad3",
+              "secondary-container": "#3a4a5f",
+              "error": "#ffb4ab",
+              "surface-tint": "#a4d64c",
+              "surface-container": "#1e2117",
+              "primary-fixed-dim": "#a4d64c",
+              "on-primary-fixed": "#131f00",
+              "surface-container-high": "#282b21",
+              "secondary": "#b7c8e1",
+              "on-tertiary-container": "#56647a",
+              "primary": "#fefff1",
+              "surface-bright": "#373a30",
+              "surface": "#11140c",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#0b1c30",
+              "inverse-surface": "#e2e4d5",
+              "on-secondary": "#213145",
+              "surface-container-highest": "#33362b",
+              "surface-dim": "#11140c",
+              "on-tertiary": "#233144",
+              "secondary-fixed-dim": "#b7c8e1",
+              "tertiary-fixed": "#d5e3fd",
+              "on-tertiary-fixed-variant": "#3a485c",
+              "on-primary-fixed-variant": "#354e00"
+      },
+      "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+      },
+      "spacing": {
+              "margin-desktop": "40px",
+              "gutter": "24px",
+              "container-max": "1280px",
+              "margin-mobile": "16px",
+              "stack-lg": "32px",
+              "stack-md": "16px",
+              "unit": "8px",
+              "stack-sm": "8px"
+      },
+      "fontFamily": {
+              "headline-md": ["Geist"],
+              "label-sm": ["Geist"],
+              "headline-lg": ["Geist"],
+              "headline-xl": ["Geist"],
+              "body-md": ["Inter"],
+              "body-sm": ["Inter"],
+              "label-md": ["Geist"],
+              "headline-xl-mobile": ["Geist"],
+              "body-lg": ["Inter"]
+      },
+      "fontSize": {
+              "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+              "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+              "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+              "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+              "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+              "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+              "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+              "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+              "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+      }
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries')
+  ],
+}
