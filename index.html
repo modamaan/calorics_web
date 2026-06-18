@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="dist/assets/index-bcqaFJnN.css" />
     <!-- Cloudflare Web Analytics -->
     <script
       defer
@@ -996,6 +996,7 @@
             their nutrition.
           </p>
           <button
+            onclick="openModal()"
             class="bg-primary-fixed text-on-primary-fixed px-12 py-5 rounded-full font-bold text-headline-md hover:scale-105 transition-transform active:scale-95 shadow-xl shadow-primary-fixed/20"
           >
             Join the Elite for Free
@@ -1282,22 +1283,69 @@
 
       function submitForm(e) {
         e.preventDefault();
-        const name = document.getElementById("ea-name").value;
-        const email = document.getElementById("ea-email").value;
+        const name = document.getElementById("ea-name").value.trim();
+        const email = document.getElementById("ea-email").value.trim();
         const goal = document.getElementById("ea-goal").value;
-        const expectations = document.getElementById("ea-expectations").value;
+        const expectations = document
+          .getElementById("ea-expectations")
+          .value.trim();
 
         const targetEmail = "amaanprogramming@gmail.com";
-        const subject = encodeURIComponent("Early Access Request - " + name);
-        const body = encodeURIComponent(
-          `Hi Calorics Team,\n\nI would like to request early access to the app.\n\nName: ${name}\nEmail: ${email}\nPrimary Goal: ${goal}\nExpectations:\n${expectations}\n\nThanks!`,
+        const subjectText = "Early Access Request - " + name;
+        const bodyText =
+          `Hi Calorics Team,\n\nI would like to request early access to the app.\n\n` +
+          `Name: ${name}\nEmail: ${email}\nPrimary Goal: ${goal}\n` +
+          `Expectations:\n${expectations}\n\nThanks!`;
+        const encodedTo = encodeURIComponent(targetEmail);
+        const encodedSubject = encodeURIComponent(subjectText);
+        const encodedBody = encodeURIComponent(bodyText);
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(
+          window.navigator.userAgent,
         );
 
-        // Open Gmail Compose with pre-filled data
-        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${subject}&body=${body}`;
+        const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodedTo}&su=${encodedSubject}&body=${encodedBody}`;
 
-        window.open(gmailLink, "_blank");
         closeModal();
+
+        if (isMobile) {
+          const isAndroid = /Android/i.test(window.navigator.userAgent);
+
+          if (isAndroid) {
+            const androidFallback = encodeURIComponent(gmailWebUrl);
+            window.location.href =
+              `intent://co?to=${encodedTo}&subject=${encodedSubject}&body=${encodedBody}` +
+              `#Intent;scheme=googlegmail;package=com.google.android.gm;` +
+              `S.browser_fallback_url=${androidFallback};end`;
+            return;
+          }
+
+          let openedExternalApp = false;
+          const markExternalAppOpened = () => {
+            openedExternalApp = true;
+          };
+
+          document.addEventListener("visibilitychange", markExternalAppOpened, {
+            once: true,
+          });
+
+          window.location.href = `googlegmail://co?to=${encodedTo}&subject=${encodedSubject}&body=${encodedBody}`;
+
+          window.setTimeout(() => {
+            document.removeEventListener(
+              "visibilitychange",
+              markExternalAppOpened,
+            );
+            if (!openedExternalApp) {
+              window.location.href = gmailWebUrl;
+            }
+          }, 900);
+          return;
+        }
+
+        const composeWindow = window.open(gmailWebUrl, "_blank", "noopener");
+        if (!composeWindow) {
+          window.location.href = gmailWebUrl;
+        }
       }
     </script>
   </body>
